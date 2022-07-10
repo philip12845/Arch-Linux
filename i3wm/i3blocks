@@ -1,0 +1,47 @@
+# i3blocks configuration file
+#
+# The i3blocks man page describes the usage of the binary,
+# and its website describes the configuration:
+#
+#     https://vivien.github.io/i3blocks
+
+# Global properties
+separator=true
+separator_block_width=15
+
+#[documentation]
+#full_text=Documentation
+#website=https://vivien.github.io/i3blocks
+#command=xdg-open "$website"
+#color=#f12711
+
+#[greetings]
+#color=#f5af19
+#command=echo "Hello, $USER!"
+#interval=once
+
+
+
+
+
+
+# Restart i3 on click
+[restart]
+full_text=Restart
+command=i3-msg -q restart
+#interval=0
+
+# Guess the weather every 15 mins
+[weather]
+command=curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo
+interval=900
+color=#A4C2F4
+
+[date]
+command=date '+%Y-%m-%d'
+interval=1 
+
+[time]
+command=date  '+%H:%M'
+interval=1
+
