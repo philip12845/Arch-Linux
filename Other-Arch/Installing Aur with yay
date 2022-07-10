@@ -1,0 +1,20 @@
+make sure your system is up to date:
+sudo pacman -Syu
+
+another prerequisite for the aur:
+sudo pacman -S git base-devel
+
+installing git skip if youve already installed git:
+sudo pacman -S git
+
+getting files:
+git clone https://aur.archlinux.org/yay.git
+
+switching directory:
+cd yay
+
+making the package:
+makepkg -si
+
+then you can use yay -S to install things
+
